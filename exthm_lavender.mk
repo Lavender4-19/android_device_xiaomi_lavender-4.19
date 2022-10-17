@@ -24,15 +24,20 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common Arrow stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common exTHmUI stuff
+$(call inherit-product, vendor/exthm/config/common.mk)
 
 # Device identifier
-PRODUCT_NAME := arrow_lavender
+PRODUCT_NAME := exthm_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
-
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+WITH_GAPPS :=true
+TARGET_SUPPORTS_QUICK_TAP := true
+USE_PIXEL_CHARGING := true
 TARGET_VENDOR_PRODUCT_NAME := lavender
